@@ -12,6 +12,7 @@ const enquiryRoutes     = require('./routes/enquiries');
 const adminRoutes       = require('./routes/admin');
 
 const app  = express();
+app.set('trust proxy', true);
 const PORT = process.env.PORT || 3000;
 
 /* ── Security headers ── */
