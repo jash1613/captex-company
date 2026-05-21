@@ -5,11 +5,9 @@ const sqlite3 = require('sqlite3').verbose();
 const path    = require('path');
 const fs      = require('fs');
 
-const DB_PATH = process.env.DB_PATH || './data/startupwala.db';
+const DB_PATH = process.env.DB_PATH || '/tmp/startupwala.db';
 
-// Ensure data directory exists
-const dir = path.dirname(DB_PATH);
-if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
 
 const db = new sqlite3.Database(DB_PATH);
 
